@@ -80,7 +80,7 @@ button {
 }
 
 img {
-    width: 500px;
+    width: (500px + 0.5vw);
     height: auto;
 }
 button.signUpButton {
