@@ -23,6 +23,7 @@ a{
     flex-shrink: 1;
     margin: 0 40px;
     flex-basis: 58%;
+    font-size: calc(8px + 0.5vw)
 }
 
 
