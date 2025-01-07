@@ -1,82 +1,87 @@
+:root {
+    --header: 3rem;
+	--footer: 3rem;
+	--main: calc(100vh - calc(var(--header) + var(--footer)));
+}
+
 body {
     font-family: 'Roboto', sans-serif;
     margin: 0;
+}
+
+.l-center {
+    color: white;
+    padding: 16px 16px;
+    width: 50vw;
+    margin: 0 auto 48px auto;
+    &.twoBlock{
+        display:flex;
+        justify-content: space-between;
+        align-items: center;
+        flex-grow: 1;
+    }
+}
+
+.header{
     display: flex;
-    flex-direction: column;
-    box-sizing: content-box;
+    justify-content: space-between;
+    font-size: min(1.5vh,1.5vw);
+    height: 200px;
+    align-items: flex-end;
+}
+
+h1 {
+    font-size: 3em;
+}
+
+ul {
+    list-style-type: none;
+    display: flex;
+    gap: 1vw;
+    margin: 0;
+    padding: 0;
 }
 
 a{
     color: #e5e7eb;
     text-decoration: none;
 }
-.header, .heroSection {
-    background-color: #1f2937;
-    color: white;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 16px;
-}
 
-.header {
-    flex-shrink: 1;
-    margin: 0 40px;
-    flex-basis: 58%;
-    font-size: calc(8px + 0.5vw)
-}
-
-
-.heroSection {
-    display: flex;
-    padding: 100px;
-    gap: 32px;
-    flex-grow: 0;
-    margin-bottom: 16px;
-}
-
-@media screen and (max-width: 1080px) {
-    .heroSection {
-        flex-direction: column;
-        justify-content: center;
-        text-align: center;
-    }
-    .subtext {
-        flex-direction: column;
-    }
+img[src="assets/images/yunjin.jpg"] {
+    flex-grow: 2;
 }
 
 h2{
     font-size: 32px;
 }
 
-.logo {
-    font-weight: bold;
-}
 
-.hero.heroHeading  {
+.container  {
     font-size: 48px;
     font-weight: 900;
-    max-width: 10em;
+    background-color: #1F2937;
+    padding: 16px;
 }
 
-.hero {
-    max-width: 30em;
-}
 
 .heroText {
     color: #e5e7eb;
-    font-size: 18px;
+    font-size: 1em;
 }
 
 button {
     background: #3882f6;
     color: white;
     border-style: none;
-    padding: 4px 16px;
+    padding: 0.5em 0.5em;
     cursor: pointer;
-    border-radius: 5px;
-    font-size: 16px;
+    border-radius: 1em;
+    font-size: 1.2em;
+    transition: transform 0.5s ease-in-out;
+}
+
+button:hover {
+  transform: translateY(-20px);
 }
 
 img {
@@ -88,25 +93,12 @@ button.signUpButton {
     color: white;
 }
 
-
-.headerContainer {
-    background-color: #1F2937;
-    min-height: 100px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-}
-
 .leftSide {
     display: flex;
     justify-content: flex-start;
 
 }
 
-.leftHero {
-    display: flex;
-    flex-direction: column;
-}
 
 .randomInfo {
     display: flex;
@@ -193,12 +185,30 @@ button.signUpButton {
     align-items: flex-end;
 }
 
+.mainContent {
+    height: var(--main);
+	margin-right: auto;
+	margin-left: auto;
+}
+
 .footer {
     display: flex;
     justify-content: center;
     align-items: center;
-    padding: 50px;
     background-color: #1f2937;
-    margin: 48px 0 0 0;
+    height: var(--footer);
     color: white;
+    font-size: 2em;
+    padding: 50px;
+}
+
+@media screen and (max-width: 1080px) {
+    .heroSection {
+        flex-direction: column;
+        justify-content: center;
+        text-align: center;
+    }
+    .subtext {
+        flex-direction: column;
+    }
 }
