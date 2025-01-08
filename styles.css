@@ -28,12 +28,11 @@ body {
     display: flex;
     justify-content: space-between;
     font-size: min(1.5vh,1.5vw);
-    height: 200px;
     align-items: flex-end;
 }
 
 h1 {
-    font-size: 3em;
+    font-size: 1em;
 }
 
 ul {
@@ -64,17 +63,18 @@ h2{
 
 p {
     color: #e5e7eb;
-    font-size: 1em;
+    font-size: 0.3em;
+    max-width: 60ch;
 }
 
 button {
     background: #3882f6;
     color: white;
     border-style: none;
-    padding: 0.5em 0.5em;
+    padding: 0.5em;
     cursor: pointer;
     border-radius: 1em;
-    font-size: 1.2em;
+    font-size: 0.5em;
     transition: transform 0.5s ease-in-out;
 }
 
@@ -85,6 +85,7 @@ button:hover {
 img {
     width: (500px + 0.075vw);
     height: auto;
+    max-width: 100%;
 }
 
 
@@ -102,10 +103,12 @@ button.signUpButton {
 
 .subtextImg {
     width: 200px;
+    min-width: 100%;
     height: 200px;
     object-fit: cover;
     border-radius: 15px;
     border: solid;
+    display: flex;
 }
 .subtextHeading {
     font-weight: bold;
@@ -116,13 +119,14 @@ button.signUpButton {
     display: flex;
     justify-content: center;
     align-items: center;
-    gap: 96px;
+    padding: 16px;
+    gap: 1em;
+    flex-grow: 1;
+    box-sizing: border;
 }
 
 .subtextContainer {
-    
     text-align: center;
-    max-width: 15em;
 }
 
 .randomInfoContainer {
@@ -149,6 +153,7 @@ button.signUpButton {
     background-color: #e5e7eb;
     padding: 70px;
     margin: 48px 0;
+    font-size: 1em;
 }
 
 .author {
@@ -167,7 +172,7 @@ button.signUpButton {
 }
 
 .callToActionContents {
-    padding: 40px 100px;
+    padding: 1em;
     background-color: #3882f6;
     border-radius: 10px;
     display: flex;
@@ -190,7 +195,7 @@ footer {
     padding: 50px;
 }
 
-@media screen and (max-width: 2700px) {
+@media screen and (max-width: 600px) {
     
     .twoBlock {
         flex-direction: column-reverse;
@@ -201,7 +206,11 @@ footer {
     img[src="assets/images/yunjin.jpg"] {
         margin-top: 48px;
     }
+    .subtextImg {
+        width: 100px;
+        height: 100px;
+    }
     .subtext {
-        flex-direction: column;
+        flex-wrap: wrap;
     }
 }
