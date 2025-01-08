@@ -12,15 +12,17 @@ body {
 .l-center {
     color: white;
     padding: 16px 16px;
-    width: 50vw;
+    width: 70vw;
     margin: 0 auto 48px auto;
-    &.twoBlock{
-        display:flex;
-        justify-content: space-between;
-        align-items: center;
-        flex-grow: 1;
-    }
 }
+
+.twoBlock{
+    display:flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+}
+
 
 .header{
     display: flex;
@@ -47,10 +49,6 @@ a{
     text-decoration: none;
 }
 
-img[src="assets/images/yunjin.jpg"] {
-    flex-grow: 2;
-}
-
 h2{
     font-size: 32px;
 }
@@ -64,7 +62,7 @@ h2{
 }
 
 
-.heroText {
+p {
     color: #e5e7eb;
     font-size: 1em;
 }
@@ -85,20 +83,15 @@ button:hover {
 }
 
 img {
-    width: (500px + 0.5vw);
+    width: (500px + 0.075vw);
     height: auto;
 }
+
+
 button.signUpButton {
     border: solid;
     color: white;
 }
-
-.leftSide {
-    display: flex;
-    justify-content: flex-start;
-
-}
-
 
 .randomInfo {
     display: flex;
@@ -180,18 +173,13 @@ button.signUpButton {
     display: flex;
     gap: 96px;
 }
-
-.footer {
-    align-items: flex-end;
-}
-
 .mainContent {
     height: var(--main);
 	margin-right: auto;
 	margin-left: auto;
 }
 
-.footer {
+footer {
     display: flex;
     justify-content: center;
     align-items: center;
@@ -202,11 +190,16 @@ button.signUpButton {
     padding: 50px;
 }
 
-@media screen and (max-width: 1080px) {
-    .heroSection {
-        flex-direction: column;
-        justify-content: center;
+@media screen and (max-width: 2700px) {
+    
+    .twoBlock {
+        flex-direction: column-reverse;
+    }
+    .hero {
         text-align: center;
+    }
+    img[src="assets/images/yunjin.jpg"] {
+        margin-top: 48px;
     }
     .subtext {
         flex-direction: column;
